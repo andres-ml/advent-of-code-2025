@@ -1,0 +1,79 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ffb251e2781ae43302ec836fbd3bb3fb",
+    "packages": [
+        {
+            "name": "andres-ml/fpl",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andres-ml/fpl.git",
+                "reference": "ff0d48970082d1b3ae68b79e4320ffb5087c3968"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andres-ml/fpl/zipball/ff0d48970082d1b3ae68b79e4320ffb5087c3968",
+                "reference": "ff0d48970082d1b3ae68b79e4320ffb5087c3968",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8,<9"
+            },
+            "require-dev": {
+                "nikic/php-parser": "^5.7.0",
+                "php": ">=8.5",
+                "phpunit/phpunit": "^9"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "build/api.php",
+                    "src/api/functions.php",
+                    "src/api/lists.php",
+                    "src/api/generators.php",
+                    "src/api/operators.php",
+                    "src/api/utils.php"
+                ],
+                "psr-4": {
+                    "Aml\\Fpl\\": "build",
+                    "Aml\\Fpl\\functions\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrés ML",
+                    "email": "andres.mingorance@gmail.com"
+                }
+            ],
+            "description": "Functional PHP library",
+            "keywords": [
+                "functional",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/andres-ml/fpl/issues",
+                "source": "https://github.com/andres-ml/fpl/tree/v1.0.0"
+            },
+            "time": "2025-12-06T21:35:29+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=8.5"
+    },
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
+}
