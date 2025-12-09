@@ -27,7 +27,7 @@ if (!file_exists($inputPath)) {
     exit(1);
 }
 
-$input = trim(file_get_contents($inputPath));
+$input = file_get_contents($inputPath);
 
 $instance = new $dayClass();
 

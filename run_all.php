@@ -25,7 +25,7 @@ for ($day = $min; $day <= $max; ++$day) {
     $dayClass = "App\\Days\\Day$day";
     if (class_exists($dayClass)) {
         $instance = new $dayClass();
-        $input = trim($inputsByDay[$day]);
+        $input = $inputsByDay[$day];
         if (method_exists($instance, 'parse')) {
             $input = $instance->parse($input);
         }

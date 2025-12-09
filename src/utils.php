@@ -50,3 +50,15 @@ function toInteger(string $n): int
 {
     return (int) $n;
 }
+
+/**
+ * @param array $matrix
+ * @return array
+ */
+function transpose(array $matrix): array
+{
+    return array_map(
+        array_values(...),
+        array_map(null, ...$matrix)
+    );
+}
