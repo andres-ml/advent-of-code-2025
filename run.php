@@ -36,6 +36,10 @@ if (!method_exists($instance, $part)) {
     exit(1);
 }
 
+if (method_exists($instance, 'parse')) {
+    $input = $instance->parse($input);
+}
+
 $result = $instance->{$part}($input);
 if (is_string($result)) {
     echo $result . PHP_EOL;

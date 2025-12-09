@@ -12,6 +12,12 @@ https://adventofcode.com/2025
 php run.php <day_number> <one|two> [path_to_input_file]
 ```
 
+or
+
+```sh
+php run_all.php
+```
+
 ## Structure
 * Solution for day `X` is found in `src/Days/DayX.php`
 * Input for day `X` should be placed in `inputs/X.txt`

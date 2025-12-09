@@ -2,9 +2,8 @@
 
 namespace App\Days;
 
-use App\Utils\Parse;
-
 use function Aml\Fpl\{map};
+use function App\Utils\parse_grid;
 
 class Day4
 {
@@ -26,7 +25,7 @@ class Day4
     {
         $total = 0;
         $steps = 0;
-        $grid = Parse::grid($input);
+        $grid = parse_grid($input);
         do {
             [$grid, $removed] = $this->step($grid);
             $total += $removed;
