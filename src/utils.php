@@ -62,3 +62,19 @@ function transpose(array $matrix): array
         array_map(null, ...$matrix)
     );
 }
+
+/**
+ * @param callable $function
+ * @return callable
+ */
+function memoize(callable $function): callable
+{
+    $cache = [];
+    return function(...$args) use(&$cache, $function) {
+        $key = implode(':', $args);
+        if (!isset($cache[$key])) {
+            $cache[$key] = $function(...$args);
+        }
+        return $cache[$key];
+    };
+}
