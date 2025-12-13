@@ -2,9 +2,11 @@
 
 namespace App\Utils;
 
+use function Aml\Fpl\flatten;
 use function Aml\Fpl\identity;
 use function Aml\Fpl\map;
 use function Aml\Fpl\partial;
+use function Aml\Fpl\slice;
 
 /**
  * Parses a grid-like text into a matrix of cells.
@@ -77,4 +79,15 @@ function memoize(callable $function): callable
         }
         return $cache[$key];
     };
+}
+
+function list_combinations(iterable $a): iterable
+{
+    return $a
+        |> map(
+            fn($item, $index) => $a
+                |> slice($index + 1, INF)
+                |> map(fn($other) => [$item, $other])
+        )
+        |> flatten(1);
 }
